@@ -195,7 +195,11 @@ extension. As of the current release of this port:
     (event page); Chrome-only manifest sections (`oauth2`, `sandbox`,
     enterprise permissions) are dropped or replaced by
     `browser_specific_settings`; the MV2 CSP string replaces the MV3 CSP
-    object.
+    object. `browser_specific_settings.gecko.data_collection_permissions`
+    (`authenticationInfo`, `personallyIdentifyingInfo`) is added per
+    Firefox's built-in data-consent manifest key (required for new
+    extensions since November 2025); the display `name` is shortened to
+    fit AMO's 45-character limit.
   - `popup.html` — the Google logo `<img>` was removed (trademark; the
     logo assets in `googlelogo/` are not redistributed).
   - `_locales/en/messages.json` — JSON key ordering only; content is
