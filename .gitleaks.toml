@@ -1,0 +1,13 @@
+# Gitleaks configuration for endpoint-verification-firefox.
+#
+# The Google API key embedded in background_service_worker.js
+# (AIzaSy...) is the public Chrome Web Store extension key shipped in the
+# official CRX — not a secret. Everything compiled in that file is
+# byte-verified against Google's package by verify.sh / CI.
+title = "gitleaks config for endpoint-verification-firefox"
+
+[[allowlists]]
+description = "Public Chrome Web Store API key shipped in Google's official CRX"
+paths = ['''^background_service_worker\.js$''']
+regexTarget = "match"
+regexes = ['''AIzaSy[A-Za-z0-9_-]{33}''']

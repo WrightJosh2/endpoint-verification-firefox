@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "Endpoint Verification (Unofficial Firefox Port)",
+  "version": "1.140.0",
+  "description": "__MSG_extension_description__",
+  "default_locale": "en",
+  "icons": {
+    "19": "icon_19_normal.png",
+    "38": "icon_38_normal.png",
+    "128": "icon_128_normal.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icon_19_normal.png",
+      "38": "icon_38_normal.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "background": {
+    "scripts": ["compat_shim.js", "background_service_worker.js"],
+    "persistent": false
+  },
+  "incognito": "not_allowed",
+  "permissions": [
+    "cookies",
+    "idle",
+    "nativeMessaging",
+    "storage",
+    "alarms",
+    "*://*.google.com/*"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "endpoint-verification@experiment.local",
+      "strict_min_version": "115.0"
+    }
+  }
+}

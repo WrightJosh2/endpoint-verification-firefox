@@ -1,0 +1,731 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "endpoint-verification-firefox-1.140.0",
+  "documentNamespace": "https://spdx.org/spdxdocs/endpoint-verification-firefox-1.140.0-1794825494",
+  "creationInfo": {
+    "created": "2026-11-16T10:38:14Z",
+    "creators": [
+      "Tool: manual-inspection"
+    ]
+  },
+  "documentDescribes": [
+    "SPDXRef-Package-Root"
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-Root",
+      "name": "endpoint-verification-firefox",
+      "versionInfo": "1.140.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": true,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC and other contributors; port additions copyright their authors",
+      "comment": "Unofficial Firefox port of Google's Endpoint Verification extension (Chrome Web Store item callobklhcbilhphinckomhgkigmfocg, v1.140.0). Root package aggregating all distributed artifacts.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-GoogleBundle",
+      "name": "Google Endpoint Verification compiled bundle",
+      "versionInfo": "1.140.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": true,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "comment": "Compiled/minified output of Google's extension; not reviewable source. Derived from the official CRX (SHA256 617bdda6bc41ac9e177691d489c22de458fa38bd738e792d964c61b99c151eed); byte-identical files verified.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Closure",
+      "name": "Closure Library (embedded, compiled)",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright The Closure Library Authors",
+      "comment": "Portions of the Closure Library compiled into background_service_worker.js and the UI scripts (goog.* namespaces, logging, events, promises). Not separable from the bundle.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Asn1js",
+      "name": "asn1js",
+      "versionInfo": "v1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2014, GMO GlobalSign; Copyright (c) 2015, Peculiar Ventures",
+      "comment": "ASN.1/BER/DER parser (third_party/javascript/asn1js/v1/*) compiled into background_service_worker.js.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Pkijs",
+      "name": "pkijs",
+      "versionInfo": "v1",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "BSD-3-Clause",
+      "copyrightText": "Copyright (c) 2015, Peculiar Ventures",
+      "comment": "PKI/X.509 schema handling (third_party/javascript/pkijs/v1/*) compiled into background_service_worker.js.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Moment",
+      "name": "moment.js",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "Copyright (c) JS Foundation and other contributors",
+      "comment": "third_party/javascript/moment/min/moment.min.js compiled into background_service_worker.js.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-MochiKit-Deferred",
+      "name": "MochiKit-derived Deferred",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "Copyright 2005, 2007 Bob Ippolito. All Rights Reserved.",
+      "comment": "Deferred/async pattern (ancestor of goog.async.Deferred) embedded in background_service_worker.js with inline attribution.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-MDL",
+      "name": "Material Design Lite",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": true,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright 2015 Google Inc. All Rights Reserved",
+      "comment": "Google's Material Design Lite compiled JS, distributed as mdl_all_js_compiled.js.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Roboto",
+      "name": "Roboto fonts",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": true,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "comment": "Roboto web fonts (woff2) distributed under css/roboto/.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-MaterialIcons",
+      "name": "Material Icons font",
+      "versionInfo": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": true,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "comment": "Material Icons font (woff2) distributed under css/material_icons/.",
+      "primaryPackagePurpose": "APPLICATION"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-Port",
+      "name": "Firefox port additions",
+      "versionInfo": "1.0",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": true,
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "copyrightText": "Copyright the endpoint-verification-firefox maintainers",
+      "comment": "Human-readable port-specific code: compat_shim.js (Chrome MV3 -> Firefox MV2 API shim), setup-native-host.sh (native helper installer).",
+      "primaryPackagePurpose": "APPLICATION"
+    }
+  ],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File--manifest-json",
+      "fileName": "manifest.json",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bd279ef4215d49099279b9e931de412482f1c2b389e2cb0b4b70b35d01d2005f"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC and other contributors; port additions copyright their authors",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--background_service_worker-js",
+      "fileName": "background_service_worker.js",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2de34923b82173fc82f6c73aa163ff7bccd0dab53eb21f364ba05e7f75886c26"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--popup_script-js",
+      "fileName": "popup_script.js",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e6bdce84d7c6324cdacd97782aa93612458c133f56a93f713ab573d56cee6c74"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--options_script-js",
+      "fileName": "options_script.js",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4a22856cbbc0bfa2372400be44e3359245a733c1a77aa8aedfad6e1f93f80178"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--log_script-js",
+      "fileName": "log_script.js",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "766e998b64f76740e9a89b7da6023266aa9d577cdef1761d893df55950523b1b"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--offscreen_script-js",
+      "fileName": "offscreen_script.js",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4934d251043040f4c81c3158ed462812034d94c6590025e7c7bcb92ed4665272"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--iframe_sandbox-html",
+      "fileName": "iframe_sandbox.html",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "478b03f3ef4c96b5b8bc2083fe212d3320f6e9db482374fa1fab5b16e8f525e4"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--popup-html",
+      "fileName": "popup.html",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5ea1ca45c05b69654d2825b7cf1c567ee44d391cec6328b7109a9ef4cfdce9f6"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--options-html",
+      "fileName": "options.html",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7e8a195d25ef499520d4e665d2e6a9644e74c137d792b0d398e0946bb92d229f"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--log-html",
+      "fileName": "log.html",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ce4ad61020c0369b15d2b0874fc4048ef54950a41e5d84ea37fd4b81c1040457"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--offscreen-html",
+      "fileName": "offscreen.html",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "33241955a7053507413b6f5a217b7171cde9353972a3b1254281bb1fb1d8ef42"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--popup-css",
+      "fileName": "popup.css",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "adc89799154685993a7a56cf47d50ea416ee2eac69a4ed2251b60707a505759f"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--options-css",
+      "fileName": "options.css",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "198e4d502182ac4d6f7c529ba08fbd1c903d00a7976f9b851f5f137351402f1f"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--log-css",
+      "fileName": "log.css",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f9bd527e52042f7933086a7f664bfb659a7061292bd75f7d7dc7764b49a789ab"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--material_design_lite-css",
+      "fileName": "material_design_lite.css",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e089a1ec6abfd7c13af13fbf2180835ea1b38158ac8d7ae0ccb59bb1be3feeb6"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--mdl_all_js_compiled-js",
+      "fileName": "mdl_all_js_compiled.js",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "86ef04c9fd6c28ba39f40266ad92de34e5698518b8f97d1933ecf14e6d018d97"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright 2015 Google Inc. All Rights Reserved",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--Roboto-Black-woff2",
+      "fileName": "css/roboto/Roboto-Black.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "42d52f82ad587c47d139cb19f97dd84aa59811fc5342652b463fbc2e8c82099d"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--Roboto-Bold-woff2",
+      "fileName": "css/roboto/Roboto-Bold.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "03de3a7dc6b45899a6feb819c400d2e8ede9878c2255049664a24cd74fa99e2e"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--Roboto-BoldItalic-woff2",
+      "fileName": "css/roboto/Roboto-BoldItalic.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f495b9f502ae1c8beadc8e06556d539be26f8675e39089292112ae3a3ec0938f"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--Roboto-Italic-woff2",
+      "fileName": "css/roboto/Roboto-Italic.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d2f9b505560b84bf70ef6c16542bebc5a7109ded754dbd62cf0e51ec9d0e3a1f"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--Roboto-Light-woff2",
+      "fileName": "css/roboto/Roboto-Light.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0ae3fca7dfb447694d17f61304b1496fc4a47097aa800ec5e398def859a0d420"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--Roboto-Medium-woff2",
+      "fileName": "css/roboto/Roboto-Medium.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "33d29c19f481d788208eda56e3adb7e542cd9007f1f05ee6df7752ec1307dfc7"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--Roboto-Regular-woff2",
+      "fileName": "css/roboto/Roboto-Regular.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7d9accef4f46377f4477eafed77d83e670d31e6e9bae58c096d8eac6961c4722"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--Roboto-Thin-woff2",
+      "fileName": "css/roboto/Roboto-Thin.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "98b2682d6296f7efa9f1e14dddbf90d841f89725d9242c98bddd08ce10fd316b"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--roboto--roboto-css",
+      "fileName": "css/roboto/roboto.css",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fb0666f702d13005fb1befb1e27b39d898e3aa3bee19794fb7f4aa0326c15555"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--material_icons--MaterialIcons-Regular-woff2",
+      "fileName": "css/material_icons/MaterialIcons-Regular.woff2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ea57fd3d10c778822a566ccd0f5cb24eb412557f669a622a9c70e067ca6a1f0d"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--css--material_icons--material_icons-css",
+      "fileName": "css/material_icons/material_icons.css",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d8fe30df9f490d5cedadc3daa1d8db4ba9c57941845449389dcaa288f02fee1d"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright Google LLC",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--compat_shim-js",
+      "fileName": "compat_shim.js",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "aec19b1ec5de8f9486fc445b93aa6a9f9b8badfb31eed958cb86dfcedaa98c8e"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright the endpoint-verification-firefox maintainers",
+      "licenseDeclared": "Apache-2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-File--setup-native-host-sh",
+      "fileName": "setup-native-host.sh",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a7c9c41a1cd78a89d90d0bd96e7982f24a9e453e4534b06a4000a8f3432aecbf"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "copyrightText": "Copyright the endpoint-verification-firefox maintainers",
+      "licenseDeclared": "Apache-2.0"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-Package-Root"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--manifest-json"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-GoogleBundle"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--background_service_worker-js"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--popup_script-js"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--options_script-js"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--log_script-js"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--offscreen_script-js"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--iframe_sandbox-html"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--popup-html"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--options-html"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--log-html"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--offscreen-html"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--popup-css"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--options-css"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--log-css"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-GoogleBundle",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--material_design_lite-css"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Closure"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Asn1js"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Pkijs"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Moment"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-MochiKit-Deferred"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-MDL"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-MDL",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--mdl_all_js_compiled-js"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Roboto"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--Roboto-Black-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--Roboto-Bold-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--Roboto-BoldItalic-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--Roboto-Italic-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--Roboto-Light-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--Roboto-Medium-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--Roboto-Regular-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--Roboto-Thin-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Roboto",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--roboto--roboto-css"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-MaterialIcons"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-MaterialIcons",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--material_icons--MaterialIcons-Regular-woff2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-MaterialIcons",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--css--material_icons--material_icons-css"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Root",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-Package-Port"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Port",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--compat_shim-js"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Port",
+      "relationshipType": "CONTAINS_FILE",
+      "relatedSpdxElement": "SPDXRef-File--setup-native-host-sh"
+    }
+  ]
+}

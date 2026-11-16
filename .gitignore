@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Local diagnostics / logs (never commit)
+*.log
+evfx-console.log
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# Packaging output
+*.zip
+*.xpi
+web-ext-artifacts/

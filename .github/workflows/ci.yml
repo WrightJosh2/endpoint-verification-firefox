@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly: re-assert provenance. If Google ships a new version of the
+    # official extension, verify.sh fails loudly (pinned CRX hash mismatch),
+    # flagging the snapshot as stale.
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ShellCheck (installer + verify script)
+        # Deliberately no third-party action: shellcheck comes from the
+        # runner's Ubuntu repositories (pinned by distro version).
+        run: |
+          command -v shellcheck >/dev/null 2>&1 || {
+            sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck
+          }
+          shellcheck setup-native-host.sh verify.sh
+
+      - name: Syntax-check port JS
+        run: node --check compat_shim.js
+
+      - name: Validate JSON (manifest, SBOM, locales)
+        run: |
+          python3 - <<'EOF'
+          import json, glob, sys
+          for f in ["manifest.json", "sbom.spdx.json"] + glob.glob("_locales/*/messages.json"):
+              json.load(open(f))
+              print("OK", f)
+          EOF
+
+      - name: Validate SBOM (SPDX 2.3 structure)
+        run: |
+          python3 - <<'EOF'
+          import json
+          doc = json.load(open("sbom.spdx.json"))
+          assert doc["spdxVersion"] == "SPDX-2.3"
+          assert doc["dataLicense"] == "CC0-1.0"
+          assert doc["packages"] and doc["files"] and doc["relationships"]
+          print("SBOM OK:", len(doc["packages"]), "packages,", len(doc["files"]), "files")
+          EOF
+
+      - name: Provenance check (byte-identity vs official CRX)
+        run: ./verify.sh
+
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: web-ext lint (Firefox packaging validation)
+        run: |
+          npm install -g web-ext
+          web-ext lint --warnings-as-errors="" .

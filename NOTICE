@@ -1,0 +1,49 @@
+NOTICE
+======
+
+This repository is an unofficial, community port of Google's "Endpoint
+Verification" browser extension (internal name: "SecureConnect") to Firefox.
+It is NOT affiliated with, endorsed by, or supported by Google LLC or
+Mozilla.
+
+Provenance
+----------
+The extension logic in this repository (background_service_worker.js,
+popup_script.js, options_script.js, log_script.js, offscreen_script.js,
+mdl_all_js_compiled.js, and the HTML/CSS files) is the *compiled, minified
+output* of Google's Chrome extension "Endpoint Verification", version
+1.140.0 (Chrome Web Store item ID
+callobklhcbilhphinckomhgkigmfocg), repackaged to run on Firefox. It is not
+source code and cannot be meaningfully reviewed line by line. See
+README.md ("Verification") for the CRX checksum, download procedure, and
+the exact list of intentional differences between this package and the
+official CRX. The compiled files were verified byte-identical to the
+official CRX at the time of packaging.
+
+Port-specific code added by the maintainers:
+  - compat_shim.js           Chrome MV3 -> Firefox MV2 API compatibility shim
+  - setup-native-host.sh     Installs Google's native helper for Firefox
+  - manifest.json            Converted to Manifest V2 for Firefox
+
+The compiled code contains embedded copyright notices ("Copyright Google LLC",
+"Copyright The Closure Library Authors", SPDX-License-Identifier: Apache-2.0).
+The Closure Library components are distributed under the Apache License 2.0.
+The maintainers believe redistribution of this derived work is permitted
+under those notices and Apache-2.0, but provide no legal guarantee; the
+package is provided "AS IS" with no warranty of any kind (see LICENSE).
+
+Trademarks
+----------
+"Google", "Google Workspace", "Chrome" and the Google logo are trademarks of
+Google LLC. The Google logo assets that shipped with the original package
+have been removed from this repository. The descriptive name of this
+repository is not intended to imply any affiliation with or endorsement by
+Google. All other trademarks are the property of their respective owners.
+
+Native helper binary
+--------------------
+The native messaging helper (ApiHelper) is NOT included in this repository.
+setup-native-host.sh downloads Google's official installer from
+dl.google.com over HTTPS and verifies its package signature before
+extracting the binary. The helper remains Google's proprietary software and
+is governed by its own license terms.
