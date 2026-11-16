@@ -17,7 +17,7 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: ShellCheck (installer + verify script)
         # Deliberately no third-party action: shellcheck comes from the
@@ -60,6 +60,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: web-ext lint (Firefox packaging validation)
+        # Warnings are expected (Google's code references Chrome-only APIs
+        # that compat_shim.js stubs) and non-fatal by default; lint fails
+        # only on errors. --self-hosted: this is not an AMO submission.
         run: |
           npm install -g web-ext
-          web-ext lint --warnings-as-errors="" .
+          web-ext lint --self-hosted
